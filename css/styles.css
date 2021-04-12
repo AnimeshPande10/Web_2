@@ -1,0 +1,166 @@
+/* div{
+  background-color: #c7f3ff;   /* it is not applied fully as there is a margin in body and h1 element by default
+} */
+
+body{
+ margin: 0;
+ text-align: center;   /*helps in centering the whole text in the screen. Now this only works when the elements are inline or block element which occupy the whole screen but if we restrict the width of h1 say width=40px it will no longer allign to the center. Then we use margin:auto */
+ font-family: 'Merriweather', serif;
+}
+
+/*h1{
+  width:50%;
+  margin: 0 auto 0 auto;   /*auto margin implies that it will occupy the center of the space it has. So from left it is auto center and from right too
+}*/
+
+h1{
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-family: 'Sacramento', cursive;
+  /*font-size: 60px;  /*Some peopole have default font size large but that wont affect it if we take a constant value so we use percentage */
+  /*We should use rem as it is the least error prone*/
+  font-size: 3.75rem; /*default ie 100%=16px */   /*Or we can use em as 1em=16px*/ /*therefore we can say font-size:3.75em */ /*This font size is inherited so if we declare font-size:2em in body and then this is h1 it will be multiplid on top of it. Same for percentages */  /*rem=Root em which bypasses the previous prob*/
+  color: #51c4d3;
+}
+h2{
+  font-family:'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  color: #51c4d3;
+}
+h3{
+  font-family: 'Montserrat', sans-serif;
+  color: #126e82;
+}
+h5{
+    font-size: 1.2rem;
+    color: #51c4d3;
+    font-weight: normal;
+}
+hr{  /*for dots*/
+  border-style: dotted none none none;
+  border-width: 5px;
+  width: 4%;
+  border-color: grey;
+  height: 0;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+p{
+  line-height: 2em;
+}
+.bottom-cloud{
+  position:absolute;   /*this is done to centralize the mountain in the screen*/
+  bottom:300px;        /*same as done in top-cloud*/
+  left:460px;
+}
+.top-cloud{
+  position: absolute;  /*Now its position will be relative to the div top container as we have made the pos of top container relative. */
+  top:60px;            /*60px from the top of top container*/
+  right:460px;         /*460 px from the right of top container*/
+  padding-bottom: 12px;
+  /* padding-left: 80px; */
+}
+.top-container{
+  padding-top: 120px;
+  position: relative;
+  background-color: #EAF6F6;
+
+}
+.skill-row{
+  width: 50%;
+  margin: 50px auto 150px auto;
+  text-align: left;
+}
+
+.middle-container{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.bottom-container{
+  background-color: #66BFBF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.change_prog{
+  width: 25%;    /*width is 25 % of the total width of the container div which itself is 50% of the body */
+  margin-right: 30px;
+  float: left;   /*float is used to wrap the text around the image in this case the text comex to the right of the image */
+  /*float should only be used for wrapping texts and therefoe should not be used to position as it might caue errors */
+}
+
+.change_game{
+  width: 25%;    /*width is 25 % of the total width of the container div which itself is 50% of the body */
+  margin-right: 30px;
+  float: left;
+}
+
+.change_guitar{
+  width: 25%;    /*width is 25 % of the total width of the container div which itself is 50% of the body */
+  float: right;
+  /* margin-left: 30px; */
+}
+/* .allign{
+  clear:left;   /*clear is basiccaly anti float. It clears itself from the float and does not wrap next to the img and the text is then displayed on the left bottom of the image
+}
+.allign_right{
+  clear: right;
+} */
+.spann{
+  text-decoration: underline;
+}
+.skills{
+  margin-bottom: -20px;
+}
+.footer-link:link{
+  color: #11999E;
+  text-decoration: none;
+  margin: 5px 10px auto 10px;
+  font-family:'Montserrat', sans-serif;
+}
+.footer-link:visited{
+  color: #116466;
+  text-decoration: none;
+  font-family:'Montserrat', sans-serif;
+}
+
+.footer-text-bot{
+  color: white;
+  font-size: 10px;
+  font-family:'Montserrat', sans-serif;
+}
+.BUTTON_TGD {
+   background: #3D94F6;
+   background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
+   background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
+   background-image: -ms-linear-gradient(top, #3D94F6, #1E62D0);
+   background-image: -o-linear-gradient(top, #3D94F6, #1E62D0);
+   background-image: -webkit-gradient(to bottom, #3D94F6, #1E62D0);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   color: #FFFFFF;
+   font-family: Verdana;
+   font-size: 16px;
+   font-weight: 100;
+   padding: 8px;
+   border: solid #337FED 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.BUTTON_TGD:hover {
+   border: solid #337FED 1px;
+   background: #1E62D0;
+   background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -webkit-gradient(to bottom, #1E62D0, #3D94F6);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   text-decoration: none;
+}
